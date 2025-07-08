@@ -1,19 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        label 'slave2'
+    }
     stages {
-        stage ('anyip') {
+        stage ('maven') {
             steps {
-                echo "displaying any ip"
-                sh "hostname -i"
-            }
-        }
-        stage ('myip') {
-            agent {
-                label 'slave2'
-            }
-            steps {
-                echo "displaying my ip"
-                sh "hostname -i"
+                sh "mvn --version"
             }
         }
     }
