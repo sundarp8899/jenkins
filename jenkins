@@ -1,1 +1,13 @@
 
+pipeline {
+    agent {
+        lable 'slave2'
+    }
+    stages {
+        stage {
+            stpes {
+                echo "i am from australia"
+            }
+        }
+    }
+}
