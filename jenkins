@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage ('any ip') {
+        stage ('anyip') {
             steps {
-                echo "displaying any machine ip"
+                echo "displaying any ip"
                 sh "hostname -i"
             }
         }
@@ -16,7 +16,5 @@ pipeline {
                 sh "hostname -i"
             }
         }
-        }
-
     }
 }
