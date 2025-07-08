@@ -1,13 +1,22 @@
 pipeline {
-    agent {
-        label 'slave2'
-    }
+    agent any
     stages {
-        stage ('build') {
+        stage ('any ip') {
             steps {
-                echo "i am from australia"
+                echo "displaying any machine ip"
                 sh "hostname -i"
             }
         }
+        stage ('myip') {
+            agent {
+                label 'slave2'
+            }
+            steps {
+                echo "displaying my ip"
+                sh "hostname -i"
+            }
+        }
+        }
+
     }
 }
