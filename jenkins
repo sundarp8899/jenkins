@@ -1,13 +1,11 @@
-
 pipeline {
-    agent {
-        lable 'slave2'
-    }
+    agent any
     stages {
-        stage {
-            stpes {
-                echo "i am from australia"
+        stage ("bulid") {
+            steps {
+                echo "i am from india"
             }
         }
+
     }
 }
