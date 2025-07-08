@@ -3,7 +3,7 @@ pipeline {
         label 'slave2'
     }
     tools{
-        maven 'maven-3.8.9'
+        maven 'maven-3.8.8'
     }
     stages {
         stage ('maven') {
